@@ -1,0 +1,43 @@
+{
+  "name": "big-comment-ascii",
+  "displayName": "Big Comment ASCII",
+  "description": "Convert selected text into large ASCII-art comments",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onCommand:bigComment.convert"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "bigComment.convert",
+        "title": "Convert to Big ASCII Comment"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "bigComment.convert",
+        "key": "ctrl+alt+b",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "bigComment.convert",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/vscode": "^1.80.0"
+  }
+}
