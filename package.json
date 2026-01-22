@@ -6,8 +6,12 @@
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Other"],
-  "activationEvents": ["onCommand:bigComment.convert"],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:bigComment.convert"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -33,11 +37,11 @@
     }
   },
   "scripts": {
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "compile": "npx tsc -p ./",
+    "watch": "npx tsc -watch -p ./"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "@types/vscode": "^1.80.0"
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.9.3"
   }
 }
